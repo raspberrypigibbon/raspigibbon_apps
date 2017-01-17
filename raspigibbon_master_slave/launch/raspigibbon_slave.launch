@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <group ns="raspigibbon">
+    <node name="raspigibbon_slave_publisher" pkg="raspigibbon_master_slave" type="slave_joint_state.py" />
+  </group>
+</launch>
