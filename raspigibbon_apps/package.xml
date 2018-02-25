@@ -43,7 +43,7 @@
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>futaba_servo</run_depend>
+  <run_depend>raspigibbon_ros</run_depend>
   <run_depend>raspigibbon_master_slave</run_depend>
   <run_depend>raspigibbon_utils</run_depend>
 
