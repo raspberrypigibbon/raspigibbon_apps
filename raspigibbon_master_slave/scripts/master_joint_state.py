@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-from raspigibbon_utils import read_eef
 import rospy
 from sensor_msgs.msg import JointState
+from futaba_serial_servo import RS30X
 
 class Master:
 	def __init__(self):
-		self.rs = read_eef.RS304MD()
+		self.rs = RS30X.RS304MD()
 		self.pub = rospy.Publisher("master_joint_state", JointState, queue_size=10)
 		for i in range(1,6):
 			self.rs.setTorque(i, False)
