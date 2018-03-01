@@ -98,7 +98,7 @@ find_package(catkin REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES raspigibbon_utils
-#  CATKIN_DEPENDS other_catkin_pkg
+#  CATKIN_DEPENDS rospy
 #  DEPENDS system_lib
 )
 
@@ -141,10 +141,12 @@ catkin_package(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# install(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+install(PROGRAMS
+  scripts/hand_rest.py
+  scripts/open_hand.py
+  scripts/torque_off.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables and/or libraries for installation
 # install(TARGETS raspigibbon_utils raspigibbon_utils_node
